@@ -1,159 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cursos da TechNova Escola de Informática.">
-<title>TechNova | Cursos</title><link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os cursos da TechNova Escola de Informática.">
+    <title>TechNova | Cursos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .course-card .course-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #edf0f5;
+            color: #697386;
+            font-size: .84rem;
+        }
+        .course-card .course-info strong {
+            color: #182033;
+        }
+        .course-card.hidden {
+            display: none;
+        }
+        .course-card .course-level {
+            margin-top: 14px;
+        }
+        .course-card .btn-course {
+            margin-top: 18px;
+            width: 100%;
+            text-align: center;
+        }
+        .course-count {
+            color: #697386;
+            font-size: .9rem;
+            margin-bottom: 18px;
+        }
+        .course-intro {
+            max-width: 720px;
+        }
+    </style>
 </head>
+
 <body>
-<header class="site-header"><div class="container nav-wrapper">
-<a class="logo" href="index.html"><span class="logo-mark">TN</span> TechNova</a><button class="menu-toggle" aria-label="Abrir menu">☰</button>
-<nav class="main-nav"><a href="index.html">Home</a><a class="active" href="cursos.html">Cursos</a><a href="professores.html">Professores</a><a href="calendario.html">Calendário</a><a href="contato.html">Contato</a></nav>
-</div></header>
+<header class="site-header">
+    <div class="container nav-wrapper">
+        <a class="logo" href="index.html">
+            <span class="logo-mark">TN</span> TechNova
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a class="active" href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="calendario.html">Calendário</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+</header>
 
 <main>
-<section class="page-hero"><div class="container"><p class="eyebrow">FORMAÇÃO</p><h1>Nossos cursos</h1><p>Escolha uma trilha de aprendizagem e desenvolva competências para o mercado de tecnologia.</p></div></section>
-<section class="section"><div class="container">
-<div class="filter-bar"><button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="iniciante">Iniciante</button><button class="filter" data-filter="programacao">Programação</button><button class="filter" data-filter="seguranca">Segurança</button></div>
-<div class="cards-grid course-list">
-<article class="course-card course-item" data-category="iniciante"><div class="course-icon">⌨</div><span class="tag">Iniciante</span><h2>Informática Básica</h2><p>Computadores, Windows, internet, arquivos, edição de textos, planilhas e apresentações.</p><ul class="mini-list"><li>60 horas</li><li>Presencial</li><li>Certificado</li></ul><button class="text-btn modal-open" data-course="Informática Básica">Detalhes →</button></article>
-<article class="course-card featured course-item" data-category="programacao"><div class="course-icon">{"</>"}</div><span class="tag">Programação</span><h2>Desenvolvimento Web</h2><p>Criação de páginas com HTML5 e CSS3, lógica, JavaScript e fundamentos de responsividade.</p><ul class="mini-list"><li>80 horas</li><li>Presencial</li><li>Projeto final</li></ul><button class="text-btn modal-open" data-course="Desenvolvimento Web">Detalhes →</button></article>
-<article class="course-card course-item" data-category="seguranca"><div class="course-icon">▣</div><span class="tag">Segurança</span><h2>Informática Forense</h2><p>Fundamentos de perícia digital, cadeia de custódia, evidências e análise inicial de incidentes.</p><ul class="mini-list"><li>70 horas</li><li>Laboratório</li><li>Certificado</li></ul><button class="text-btn modal-open" data-course="Informática Forense">Detalhes →</button></article>
-<article class="course-card course-item" data-category="programacao"><div class="course-icon">⌘</div><span class="tag">Programação</span><h2>Algoritmos e Lógica</h2><p>Variáveis, operadores, condicionais, repetições, vetores, funções e resolução de problemas.</p><ul class="mini-list"><li>50 horas</li><li>Presencial</li><li>Exercícios</li></ul><button class="text-btn modal-open" data-course="Algoritmos e Lógica">Detalhes →</button></article>
-<article class="course-card course-item" data-category="seguranca"><div class="course-icon">⌁</div><span class="tag">Segurança</span><h2>Segurança da Informação</h2><p>Princípios de confidencialidade, integridade, disponibilidade, boas práticas e proteção de dados.</p><ul class="mini-list"><li>40 horas</li><li>Presencial</li><li>Projeto</li></ul><button class="text-btn modal-open" data-course="Segurança da Informação">Detalhes →</button></article>
-<article class="course-card course-item" data-category="iniciante"><div class="course-icon">◫</div><span class="tag">Iniciante</span><h2>Office e Produtividade</h2><p>Ferramentas de escritório para documentos, planilhas, apresentações e organização profissional.</p><ul class="mini-list"><li>45 horas</li><li>Presencial</li><li>Certificado</li></ul><button class="text-btn modal-open" data-course="Office e Produtividade">Detalhes →</button></article>
-</div>
-</div></section>
-</main>
-<footer class="site-footer"><div class="container footer-grid"><div><a class="logo footer-logo" href="index.html"><span class="logo-mark">TN</span> TechNova</a><p>Escola de Informática e Tecnologia.</p></div><div><h4>Institucional</h4><a href="cursos.html">Cursos</a><a href="professores.html">Professores</a><a href="calendario.html">Calendário</a></div><div><h4>Atendimento</h4><a href="contato.html">Contato</a><a class="whatsapp-link" href="#" data-whatsapp>WhatsApp</a></div></div><div class="footer-bottom">© 2026 TechNova. Projeto acadêmico.</div></footer>
-<a class="floating-whatsapp" href="#" data-whatsapp aria-label="Contato pelo WhatsApp">☏</a>
-<div class="modal" id="courseModal" aria-hidden="true"><div class="modal-box"><button class="modal-close" aria-label="Fechar">×</button><p class="eyebrow">DETALHES DO CURSO</p><h2 id="modalTitle">Curso</h2><p id="modalDescription"></p><ul id="modalList" class="check-list"></ul><a class="btn btn-primary" href="contato.html">Solicitar matrícula</a></div></div>
-<script src="js/script.js"></script>
-  
-  <!-- ================= CALENDÁRIO ================= -->
-
-    <section class="py-5" id="calendario">
-
-      <div class="container">
-
-        <div class="section-title text-center mb-5">
-
-          <span class="eyebrow">
-            CALENDÁRIO
-          </span>
-
-          <h2>
-            Próximas turmas
-          </h2>
-
+    <section class="page-hero">
+        <div class="container">
+            <p class="eyebrow">FORMAÇÃO PROFISSIONAL</p>
+            <h1>Nossos cursos</h1>
+            <p class="course-intro">
+                Escolha uma formação e desenvolva competências práticas em informática,
+                programação, segurança e tecnologia.
+            </p>
         </div>
-
-
-        <div class="table-responsive">
-
-          <table class="table table-hover align-middle">
-
-            <thead class="table-dark">
-
-              <tr>
-                <th>Curso</th>
-                <th>Início</th>
-                <th>Horário</th>
-                <th>Modalidade</th>
-                <th>Vagas</th>
-              </tr>
-
-            </thead>
-
-            <tbody>
-
-              <tr>
-
-                <td>
-                  Informática Essencial
-                </td>
-
-                <td>
-                  02/09/2026
-                </td>
-
-                <td>
-                  Seg. e Qua. • 18h
-                </td>
-
-                <td>
-                  Presencial
-                </td>
-
-                <td>
-                  <span class="badge text-bg-success">
-                    8 vagas
-                  </span>
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td>
-                  Python
-                </td>
-
-                <td>
-                  05/09/2026
-                </td>
-
-                <td>
-                  Sáb. • 09h
-                </td>
-
-                <td>
-                  Online
-                </td>
-
-                <td>
-                  <span class="badge text-bg-warning">
-                    4 vagas
-                  </span>
-                </td>
-
-              </tr>
-
-
-              <tr>
-
-                <td>
-                  Desenvolvimento Web
-                </td>
-
-                <td>
-                  12/09/2026
-                </td>
-
-                <td>
-                  Sáb. • 14h
-                </td>
-
-                <td>
-                  Presencial
-                </td>
-
-                <td>
-                  <span class="badge text-bg-success">
-                    10 vagas
-                  </span>
-                </td>
-
-              </tr>
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </div>
-
     </section>
-</body></html>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">ENCONTRE SUA FORMAÇÃO</p>
+                <h2>Aprenda no seu ritmo</h2>
+                <p>Filtre os cursos por nível e encontre a opção ideal para seus objetivos.</p>
+            </div>
+
+            <div class="filter-bar" aria-label="Filtros de cursos">
+                <button class="filter active" data-filter="todos">Todos</button>
+                <button class="filter" data-filter="iniciante">Iniciante</button>
+                <button class="filter" data-filter="intermediario">Intermediário</button>
+                <button class="filter" data-filter="profissionalizante">Profissionalizante</button>
+            </div>
+
+            <p class="course-count" id="courseCount">6 cursos encontrados</p>
+
+            <div class="cards-grid course-list" id="courseList">
+
+                <article class="course-card" data-level="iniciante">
+                    <div class="course-icon">⌨</div>
+                    <span class="tag">Iniciante</span>
+                    <h3>Informática Básica</h3>
+                    <p>
+                        Fundamentos de computadores, sistemas operacionais, internet
+                        e ferramentas de escritório.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Windows</li>
+                        <li>Internet</li>
+                        <li>Office</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>40 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+                <article class="course-card featured" data-level="intermediario">
+                    <div class="course-icon">{"</>"}</div>
+                    <span class="tag">Mais procurado</span>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>
+                        HTML, CSS, JavaScript e construção de sites responsivos,
+                        do planejamento à publicação.
+                    </p>
+                    <ul class="mini-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>80 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+                <article class="course-card" data-level="profissionalizante">
+                    <div class="course-icon">▣</div>
+                    <span class="tag">Profissionalizante</span>
+                    <h3>Informática Forense</h3>
+                    <p>
+                        Conceitos de investigação digital, preservação de evidências
+                        e segurança da informação.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Investigação</li>
+                        <li>Evidências</li>
+                        <li>Segurança</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>60 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+                <article class="course-card" data-level="iniciante">
+                    <div class="course-icon">▦</div>
+                    <span class="tag">Iniciante</span>
+                    <h3>Excel Essencial</h3>
+                    <p>
+                        Aprenda a organizar dados, criar fórmulas, trabalhar com
+                        planilhas e produzir relatórios.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Fórmulas</li>
+                        <li>Tabelas</li>
+                        <li>Relatórios</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>30 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+                <article class="course-card" data-level="intermediario">
+                    <div class="course-icon">JS</div>
+                    <span class="tag">Intermediário</span>
+                    <h3>JavaScript na Prática</h3>
+                    <p>
+                        Desenvolva páginas interativas usando lógica de programação,
+                        eventos, funções e manipulação do DOM.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Lógica</li>
+                        <li>DOM</li>
+                        <li>Eventos</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>50 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+                <article class="course-card" data-level="profissionalizante">
+                    <div class="course-icon">◈</div>
+                    <span class="tag">Profissionalizante</span>
+                    <h3>Segurança da Informação</h3>
+                    <p>
+                        Fundamentos de proteção de dados, boas práticas, ameaças
+                        digitais e segurança no ambiente corporativo.
+                    </p>
+                    <ul class="mini-list">
+                        <li>Proteção</li>
+                        <li>Privacidade</li>
+                        <li>Boas práticas</li>
+                    </ul>
+                    <div class="course-info">
+                        <span>Duração</span>
+                        <strong>60 horas</strong>
+                    </div>
+                    <a class="btn btn-primary btn-course" href="contato.html">Quero me matricular</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">COMO FUNCIONA</p>
+                <h2>Uma formação pensada para a prática</h2>
+                <p>Conteúdo objetivo, exercícios e projetos para transformar conhecimento em habilidade.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <strong>01</strong>
+                    <h3>Escolha</h3>
+                    <p>Encontre o curso que combina com seu nível e seus objetivos.</p>
+                </div>
+                <div class="step">
+                    <strong>02</strong>
+                    <h3>Aprenda</h3>
+                    <p>Acesse conteúdos organizados e desenvolva os fundamentos.</p>
+                </div>
+                <div class="step">
+                    <strong>03</strong>
+                    <h3>Pratique</h3>
+                    <p>Resolva exercícios e desenvolva projetos aplicando o conteúdo.</p>
+                </div>
+                <div class="step">
+                    <strong>04</strong>
+                    <h3>Evolua</h3>
+                    <p>Construa experiência e avance para novos desafios profissionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container cta-inner">
+            <div>
+                <p class="eyebrow">COMECE AGORA</p>
+                <h2>Pronto para aprender tecnologia?</h2>
+            </div>
+            <a class="btn btn-light" href="contato.html">Fale conosco</a>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="logo footer-logo" href="index.html">
+                <span class="logo-mark">TN</span> TechNova
+            </a>
+            <p>Escola de Informática e Tecnologia.</p>
+        </div>
+
+        <div>
+            <h4>Institucional</h4>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="calendario.html">Calendário</a>
+        </div>
+
+        <div>
+            <h4>Atendimento</h4>
+            <a href="contato.html">Contato</a>
+            <a href="contato.html#faq">Perguntas frequentes</a>
+            <a href="#" data-whatsapp>WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 TechNova. Projeto acadêmico desenvolvido em HTML5, CSS3 e JavaScript.
+    </div>
+</footer>
+
+<a class="floating-whatsapp" href="#" data-whatsapp aria-label="Contato pelo WhatsApp">☏</a>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    menuToggle?.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.course-card');
+    const count = document.getElementById('courseCount');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            filters.forEach(item => item.classList.remove('active'));
+            filter.classList.add('active');
+
+            const selected = filter.dataset.filter;
+            let visible = 0;
+
+            cards.forEach(card => {
+                const show = selected === 'todos' || card.dataset.level === selected;
+                card.classList.toggle('hidden', !show);
+                if (show) visible++;
+            });
+
+            count.textContent = `${visible} ${visible === 1 ? 'curso encontrado' : 'cursos encontrados'}`;
+        });
+    });
+</script>
+</body>
+</html>
